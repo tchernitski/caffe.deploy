@@ -279,7 +279,7 @@ void DetectionOutputLayer<Dtype>::Forward_cpu(
   top_shape.push_back(7);
   Dtype* top_data;
   if (num_kept == 0) {
-    //LOG(INFO) << "Couldn't find any detections";
+    LOG(INFO) << "Couldn't find any detections";
     top_shape[2] = num;
     top[0]->Reshape(top_shape);
     top_data = top[0]->mutable_cpu_data();
